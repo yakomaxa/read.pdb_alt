@@ -4,7 +4,7 @@ read.pdb_alt=function(file=NULL){
   pdb=read.pdb(file = file,rm.alt = F)
   pdb_new=pdb
   resnos=unique(pdb$atom$resno[which(!is.na(pdb$atom$alt))])
-  if(length(resnos)>=0){
+  if(length(resnos)>0){
     indexes=c()
     for (resno in resnos){
       ind_resno=which(pdb$atom$resno==resno)
