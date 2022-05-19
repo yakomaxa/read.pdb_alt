@@ -1,2 +1,8 @@
 # read.pdb_alt
-alternative read.pdb of R bio3d that deal with the youngest of the alternate locations
+Alternative read.pdb of R bio3d that deal with the youngest of the alternate locations.
+
+# Background
+read.pdb of bio3d (by default) dealt only with alternate location A. However, there are some PDB entries that alternate location B+C, or only B, or mixtures of these. 
+
+# 
+This wrapper function extract "youngest" alt-loc for each residue. Of course, non-alt-loc atoms are treated as-is.
